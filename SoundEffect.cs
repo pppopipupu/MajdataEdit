@@ -330,6 +330,7 @@ public partial class MainWindow
                         stobj.hasAnswer = true;
                         stobj.hasTouch = true;
                         if (note.isHanabi) stobj.hasHanabi = true;
+                        if(note.isBreak)stobj.hasBreak = true;
                         break;
                     }
                     case SimaiNoteType.TouchHold:
