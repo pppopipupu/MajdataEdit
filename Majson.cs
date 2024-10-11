@@ -16,6 +16,7 @@ internal class EditRequestjson
     public float audioSpeed;
     public float backgroundCover;
     public EditorComboIndicator comboStatusType;
+    public EditorPlayMethod editorPlayMethod;
     public EditorControlMethod control;
     public string? jsonPath;
     public float noteSpeed;
@@ -23,6 +24,11 @@ internal class EditRequestjson
     public float startTime;
     public float touchSpeed;
     public bool smoothSlideAnime;
+}
+
+public enum EditorPlayMethod
+{
+    Classic,DJAuto,Random,Disabled
 }
 
 public enum EditorComboIndicator
@@ -79,6 +85,7 @@ public class EditorSetting
     public float backgroundCover = 0.6f;
     public int ChartRefreshDelay = 1000;
     public EditorComboIndicator comboStatusType = 0;
+    public EditorPlayMethod editorPlayMethod;
     public string DecreasePlaybackSpeedKey = "Ctrl+o";
     public float Default_Answer_Level = 0.7f;
     public float Default_BGM_Level = 0.7f;
@@ -102,6 +109,7 @@ public class EditorSetting
     public float playSpeed = 7.5f;
     public string PlayStopKey = "Ctrl+Shift+x";
     public int RenderMode = 0; //0=硬件渲染(默认)，1=软件渲染
+    public int SyntaxCheckLevel = 1; //0=禁用，1=警告(默认)，2=启用
     public string SaveKey = "Ctrl+s";
     public string SendViewerKey = "Ctrl+Shift+z";
     public float touchSpeed = 7.5f;
